@@ -158,7 +158,7 @@ public class QSTileView extends ViewGroup {
             mDualLabel.setClickable(true);
             mDualLabel.setFocusable(true);
             mDualLabel.setOnClickListener(mDualDetails ? mClickSecondary : mClickPrimary);
-            mDualLabel.setOnLongClickListener(mLongClick);
+            mDualLabel.setOnLongClickListener(mClickLong);
             if (labelText != null) {
                 mDualLabel.setText(labelText);
             }

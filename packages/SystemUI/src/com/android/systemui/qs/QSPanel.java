@@ -44,6 +44,8 @@ import com.android.systemui.settings.ToggleSlider;
 import com.android.systemui.statusbar.phone.QSTileHost;
 import com.android.systemui.statusbar.policy.BrightnessMirrorController;
 
+import com.android.internal.util.omni.QSUtils;
+
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -51,14 +53,13 @@ import java.util.Collection;
 public class QSPanel extends ViewGroup {
     private static final float TILE_ASPECT = 1.2f;
 
-    protected final Context mContext;
-    protected final ArrayList<TileRecord> mRecords = new ArrayList<TileRecord>();
-    protected final View mDetail;
-    protected final ViewGroup mDetailContent;
-    protected final TextView mDetailSettingsButton;
-    protected final TextView mDetailDoneButton;
-    protected final View mBrightnessView;
-    protected final QSDetailClipper mClipper;
+    protected final ArrayList<TileRecord> mRecords = new ArrayList<>();
+    protected View mDetail;
+    protected ViewGroup mDetailContent;
+    protected TextView mDetailSettingsButton;
+    protected TextView mDetailDoneButton;
+    protected View mBrightnessView;
+    protected QSDetailClipper mClipper;
     private final H mHandler = new H();
 
     protected int mColumns;
